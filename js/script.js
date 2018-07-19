@@ -2,6 +2,10 @@
 // when user clicks anywhere on the button, the "printQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
+//Extra Credit 3. Auto-refresh the quote.
+// displays a new quote every 7 seconds
+window.setInterval(printQuote, 7000);
+
 //1. Create an array of JavaScript objects to hold the data for your quotes.
 //2. Each quote object in the quotes array should have the following properties:
 //   quote, source, optional citation, and optional year.
@@ -17,13 +21,13 @@ var quotes =
 
 //3. Create a function named getRandomQuote.
 
-// returns a random number from zero to (parameter - 1)
+// returns a random number from zero to (top - 1)
 function getRandomNumber(top)
 {
   return Math.floor(Math.random() * top);
 }
 
-// returns a random quote object from the quotes array.
+// returns a random quote object from the quotes array
 function getRandomQuote()
 {
   var randomIndex = getRandomNumber(quotes.length);
@@ -43,7 +47,7 @@ function randomBackgroundColor()
 
 //4. Create a function named printQuote.
 // constructs a string containing the different properties of the quote object.
-// displays the final HTML string to the page.
+// displays the final HTML string to the page
 function printQuote()
 {
   // creates string
@@ -67,9 +71,10 @@ function printQuote()
   }
 
   html += "</p>";
-  // sends text to quote-box element in index.html file
+  // sends text to the quote-box element in the index.html file
   document.getElementById('quote-box').innerHTML = html;
-  randomBackgroundColor(); // changes background color
+  // changes background color
+  randomBackgroundColor();
 }
 
 //5. Add good code comments to your JavaScript code.
@@ -79,5 +84,3 @@ function printQuote()
 
 //7. Before you submit your project for review,
 //make sure you can check off all of the items on the Student Project Submission Checklist.
-
-//Extra Credit 3. Auto-refresh the quote.
