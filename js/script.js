@@ -18,7 +18,7 @@ var quotes =
     {quote: "I detest that man who hides one thing in the depths of his heart, and speaks for another", source: "Homer", tags: "Philosophy"},
     {quote: "Never to suffer would never to have been blessed", source: "Edgar Allan Poe", citation: "QuotationsPage.com", tags: "Wisdom"},
     {quote: "Determine to live life with flair and laughter", source: "Maya Angelou", tags: "Wisdom"},
-    {quote: "Sometimes you can't see yourself clearly until you see yourself through the eyes of others", source: "Ellen DegGeneres", tags: "Wisdom"}
+    {quote: "Sometimes you can't see yourself clearly until you see yourself through the eyes of others", source: "Ellen DeGeneres", tags: "Wisdom"}
 ];
 
 // returns a random number from zero to (top - 1)
