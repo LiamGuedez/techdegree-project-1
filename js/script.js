@@ -2,24 +2,24 @@
 // when user clicks anywhere on the button, the "printQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
-//Extra Credit 3. Auto-refresh the quote.
 // displays a new quote every 7 seconds
-window.setInterval(printQuote, 7000);
+// the "myTimer" variable is used inside the "printQuote" function
+var myTimer = window.setInterval(printQuote, 7000);
 
-//1. Create an array of JavaScript objects to hold the data for your quotes.
-//2. Each quote object in the quotes array should have the following properties:
-//   quote, source, optional citation, and optional year.
-//Extra Credit 1. Add more properties to the quote object.
-// an array of quotes.
+// an array of quotes
 var quotes =
 [
-    {quote: "Cheese is good", source: "A guy that loves cheese"},
-    {quote: "Cake is amazing", source: "A girl that loves cake"},
-    {quote: "There is nothing like a citation", source: "A dude that loves ciations", citation: "citation magazine"},
-    {quote: "It's best to have everything, so steal it", source: "A cleptomaniac chick", citation: "South Carolina Encyclopedia of Violent Crimes", year: "2018", tags: "crime"}
+    {quote: "Intelligence plus character—that is the goal of true education", source: "Dr. Martin Luther King, Jr.", citation: "'The Purpose of Education' from Morehouse College student newspaper", year: "1947", tags: "Inspirational"},
+    {quote: "If you want to live a happy life, tie it to a goal, not to people or things", source: "Albert Einstein", tags: "Goal Setting"},
+    {quote: "Every great dream begins with a dreamer. Always remember, you have within you the strength, the patience, and the passion to reach for the stars to change the world", source: "Harriet Tubman", tags: "Inspirational"},
+    {quote: "The three great essentials to achieve anything worthwhile are, first, hard work; second, stick-to-itiveness; third, common sense", source: "Thomas A. Edison", tags: "Grit"},
+    {quote: "A friend is a second self", source: "Aristotle", tags: "Philosophy"},
+    {quote: "A man is rich in proportion to the number of things he can afford to let alone", source: "Henry David Thoreau", citation: "QuotationsPage.com", tags: "Wisdom"},
+    {quote: "I detest that man who hides one thing in the depths of his heart, and speaks for another", source: "Homer", tags: "Philosophy"},
+    {quote: "Never to suffer would never to have been blessed", source: "Edgar Allan Poe", citation: "QuotationsPage.com", tags: "Wisdom"},
+    {quote: "Determine to live life with flair and laughter", source: "Maya Angelou", tags: "Wisdom"},
+    {quote: "Sometimes you can't see yourself clearly until you see yourself through the eyes of others", source: "Ellen DegGeneres", tags: "Wisdom"}
 ];
-
-//3. Create a function named getRandomQuote.
 
 // returns a random number from zero to (top - 1)
 function getRandomNumber(top)
@@ -27,14 +27,6 @@ function getRandomNumber(top)
   return Math.floor(Math.random() * top);
 }
 
-// returns a random quote object from the quotes array
-function getRandomQuote()
-{
-  var randomIndex = getRandomNumber(quotes.length);
-  return quotes[randomIndex];
-}
-
-//Extra Credit 2. Random background color.
 // changes background color to a randomly selected color
 function randomBackgroundColor()
 {
@@ -45,8 +37,14 @@ function randomBackgroundColor()
   document.body.style.backgroundColor = color;
 }
 
-//4. Create a function named printQuote.
-// constructs a string containing the different properties of the quote object.
+// returns a random quote object from the quotes array
+function getRandomQuote()
+{
+  var randomIndex = getRandomNumber(quotes.length);
+  return quotes[randomIndex];
+}
+
+// constructs a string containing the different properties of the quote object
 // displays the final HTML string to the page
 function printQuote()
 {
@@ -71,16 +69,11 @@ function printQuote()
   }
 
   html += "</p>";
-  // sends text to the quote-box element in the index.html file
+  // sends string to the "quote-box" element in the "index.html" file
   document.getElementById('quote-box').innerHTML = html;
   // changes background color
   randomBackgroundColor();
+  // resets the timer. This keeps the timer and the button pushes from interfering with each other
+  clearInterval(myTimer);
+  myTimer = window.setInterval(printQuote, 7000);
 }
-
-//5. Add good code comments to your JavaScript code.
-
-//6. If you're having trouble with this project,
-//make sure you take a look at this great study guide: Random Quote Generator Study Guide
-
-//7. Before you submit your project for review,
-//make sure you can check off all of the items on the Student Project Submission Checklist.

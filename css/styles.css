@@ -57,7 +57,11 @@ body {
   font-style: normal;
 }
 .tags:before {
-  content: ", ";
+  content: ". (";
+  font-style: normal;
+}
+.tags:after {
+  content: ").";
   font-style: normal;
 }
 
