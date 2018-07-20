@@ -9,9 +9,9 @@ var myTimer = window.setInterval(printQuote, 7000);
 // an array of quotes
 var quotes =
 [
-    {quote: "Intelligence plus character—that is the goal of true education", source: "Dr. Martin Luther King, Jr.", citation: "'The Purpose of Education' from Morehouse College student newspaper", year: "1947", tags: "Inspirational"},
+    {quote: "Intelligence plus character—that is the goal of true education", source: "Dr. Martin Luther King, Jr.", citation: "'The Purpose of Education' from Morehouse College student newspaper", year: "1947", tags: "Wisdom"},
     {quote: "If you want to live a happy life, tie it to a goal, not to people or things", source: "Albert Einstein", tags: "Goal Setting"},
-    {quote: "Every great dream begins with a dreamer. Always remember, you have within you the strength, the patience, and the passion to reach for the stars to change the world", source: "Harriet Tubman", tags: "Inspirational"},
+    {quote: "Every great dream begins with a dreamer. Always remember, you have within you the strength, the patience, and the passion to reach for the stars to change the world", source: "Harriet Tubman", tags: "Grit"},
     {quote: "The three great essentials to achieve anything worthwhile are, first, hard work; second, stick-to-itiveness; third, common sense", source: "Thomas A. Edison", tags: "Grit"},
     {quote: "A friend is a second self", source: "Aristotle", tags: "Philosophy"},
     {quote: "A man is rich in proportion to the number of things he can afford to let alone", source: "Henry David Thoreau", citation: "QuotationsPage.com", tags: "Wisdom"},
